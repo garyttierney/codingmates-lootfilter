@@ -1,0 +1,22 @@
+Show
+    ItemLevel >= 18
+    BaseType "Uncut Skill gem"
+
+Show
+    ItemLevel >= 3
+    BaseType "Uncut Support Gem"
+
+Show
+    Sockets 2
+    MinimapIcon 2 White Kite
+
+Show
+    Sockets 3
+    MinimapIcon 2 Yellow Kite
+
+Show
+    Sockets 4
+    MinimapIcon 2 Yellow Kite
+
+Show
+    Quality >= 10

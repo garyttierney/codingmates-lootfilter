@@ -1,0 +1,5 @@
+# Lowest tier of waystone to actively highlight
+$waystone_tier = 10
+
+# The filter module for the class in use.
+Import "classes/chrono_sorc.sf"

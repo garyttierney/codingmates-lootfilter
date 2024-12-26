@@ -1,0 +1,75 @@
+
+
+Show
+    Class "Stackable Currency"
+    SetTextColor 255 207 92
+    SetBorderColor 255 207 92
+    SetBackgroundColor 76 51 12
+    Continue
+
+Show
+    Class "Stackable Currency"
+    BaseType "Mirror of Kalandra" "Perfect Jeweller's Orb" "Greater Jeweller's Orb" "Divine Orb"
+    SetFontSize 45
+    SetTextColor 255 0 0
+    SetBackgroundColor 255 255 255
+    PlayAlertSound 3 150
+    Continue
+
+Show
+    Class "Stackable Currency"
+    BaseType "Exalted Orb" "Orb of Annulment" "Chaos Orb" "Orb of Alchemy" "Gemcutter's Prism" "Orb of Chance" "Chance Shard"
+    PlayAlertSound 2 150
+    SetFontSize 35
+    Continue
+
+Show
+    BaseType  "Precursor Tablet"
+    SetTextColor 145 30 220
+    SetBackgroundColor 255 255 255
+    SetBorderColor 145 30 220
+    SetFontSize 45
+    Continue
+
+Show
+    BaseType "Breach Splinter" "Simulacrum Splinter"
+    SetBackgroundColor 65 20 80 183
+    SetBorderColor 210 20 210
+    SetFontSize 40
+    Continue
+
+Show
+    Class "Stackable Currency"
+    BaseType  "Gold"
+    StackSize >= 100000
+    PlayEffect Yellow
+    MinimapIcon 2 Yellow Circle
+
+Show
+    Class "Stackable Currency"
+    BaseType  "Gold"
+    StackSize >= 20000
+    PlayEffect White
+    MinimapIcon 2 White Circle
+
+Show
+    Class "Stackable Currency"
+    BaseType  "Mirror of Kalandra" "Perfect Jeweller's Orb"
+    PlayEffect Purple
+    MinimapIcon 0 Purple Circle
+
+Show
+    Class "Stackable Currency"
+    BaseType  "Greater Jeweller's Orb" "Divine Orb"
+    PlayEffect Brown
+    MinimapIcon 1 Brown Circle
+
+Show
+    Class "Stackable Currency"
+    BaseType "Exalted Orb" "Orb of Annulment" "Chaos Orb" "Orb of Alchemy" "Gemcutter's Prism" "Orb of Chance" "Chance Shard"
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+
+Show
+    Class "Stackable Currency"
+    BaseType "Regal Orb" "Vaal Orb" "Artificer's Orb" "Glassblower's Bauble" "Lesser Jeweller's Orb" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"

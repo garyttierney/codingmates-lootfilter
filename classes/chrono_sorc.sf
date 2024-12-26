@@ -1,0 +1,12 @@
+# Only show gear that gives us energy shield. <tune>
+Show
+    Class "Gloves" "Body Armour" "Foci" "Helmets" "Boots"
+    BaseEnergyShield > 0
+    BaseEvasion <= 0
+    BaseArmour <= 0
+    Corrupted False
+
+
+Show
+    Class "Staves" "Wands"
+    Rarity > Magic

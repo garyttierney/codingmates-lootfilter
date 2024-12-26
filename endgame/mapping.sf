@@ -1,0 +1,31 @@
+Show
+    BaseType "Waystone"
+    WaystoneTier >= ($waystone_tier + 4)
+    PlayEffect Brown
+    MinimapIcon 2 Brown Diamond
+
+Show
+    BaseType "Waystone"
+    WaystoneTier >= ($waystone_tier + 3)
+    PlayEffect Orange
+    MinimapIcon 2 Orange Diamond
+
+Show
+    BaseType "Waystone"
+    WaystoneTier >= ($waystone_tier + 2)
+    PlayEffect Yellow
+    MinimapIcon 2 Yellow Diamond
+
+Show
+    BaseType "Waystone"
+    WaystoneTier >= ($waystone_tier + 1)
+    PlayEffect White
+    MinimapIcon 2 White Diamond
+
+Show
+    BaseType "Waystone"
+    PlayEffect White
+    WaystoneTier >= $waystone_tier
+
+Show
+    BaseType "Waystone"
