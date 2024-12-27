@@ -23,13 +23,6 @@ Show
     SetFontSize 35
     Continue
 
-Show
-    BaseType  "Precursor Tablet"
-    SetTextColor 145 30 220
-    SetBackgroundColor 255 255 255
-    SetBorderColor 145 30 220
-    SetFontSize 45
-    Continue
 
 Show
     BaseType "Breach Splinter" "Simulacrum Splinter"
@@ -42,14 +35,14 @@ Show
     Class "Stackable Currency"
     BaseType  "Gold"
     StackSize >= 100000
-    PlayEffect Yellow
+    PlayEffect Yellow Temp
     MinimapIcon 2 Yellow Circle
 
 Show
     Class "Stackable Currency"
     BaseType  "Gold"
     StackSize >= 20000
-    PlayEffect White
+    PlayEffect White Temp
     MinimapIcon 2 White Circle
 
 Show
@@ -73,3 +66,9 @@ Show
 Show
     Class "Stackable Currency"
     BaseType "Regal Orb" "Vaal Orb" "Artificer's Orb" "Glassblower's Bauble" "Lesser Jeweller's Orb" "Armourer's Scrap" "Blacksmith's Whetstone" "Arcanist's Etcher"
+
+Show
+    Class Currency
+    BaseType "Catalyst" # Safety Catch-all
+    PlayEffect White
+    MinimapIcon 2 White Circle

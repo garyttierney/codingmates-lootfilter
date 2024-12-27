@@ -1,0 +1,16 @@
+Show
+    Class "Expedition Logbooks"
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+
+Show
+    Class "Currency"
+    BaseType "Exotic Coinage"
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+
+Show
+    Class "Currency"
+    BaseType "Artifact"
+    PlayEffect Yellow
+    MinimapIcon 2 Yellow Circle

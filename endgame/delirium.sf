@@ -1,10 +1,11 @@
 Show
-    BaseType "Precursor Tablet"
-    SetTextColor 255 207 255
-    SetBorderColor 255 207 255
-    SetBackgroundColor 65 20 80
-    PlayEffect Orange
-    MinimapIcon 2 Orange Diamond
+    BaseType "Distilled"
+    PlayEffect White
+    MinimapIcon 2 White Circle
+    SetTextColor 240 0 0
+    SetBorderColor 240 0 0
+    SetBackgroundColor 70 0 20
+    Continue
 
 Show
     BaseType  "Distilled Isolation" "Distilled Suffering"
@@ -36,10 +37,3 @@ Show
     MinimapIcon 2 White Circle
     Continue
 
-Show
-    BaseType "Distilled"
-    PlayEffect White
-    MinimapIcon 2 White Circle
-    SetTextColor 240 0 0
-    SetBorderColor 240 0 0
-    SetBackgroundColor 70 0 20

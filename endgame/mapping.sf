@@ -29,3 +29,13 @@ Show
 
 Show
     BaseType "Waystone"
+
+Show
+    BaseType  "Precursor Tablet"
+    SetTextColor 145 30 220
+    SetBackgroundColor 255 255 255
+    SetBorderColor 145 30 220
+    SetFontSize 45
+    PlayEffect Purple
+    MinimapIcon 0 Purple Circle
+    Continue

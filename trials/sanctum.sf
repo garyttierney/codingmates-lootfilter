@@ -1,0 +1,17 @@
+
+Show
+    BaseType  "Djinn Barya" "Inscribed Ultimatum"
+    +LootBeam(Yellow, Diamond)
+    +Plate($white, $pink, $font_size_xlarge)
+
+Show
+    BaseType "Gold Key" "Silver Key" "Bronze Key"
+    +LootBeam(Orange, Circle)
+
+Show
+    BaseType "Silver Key"
+    +LootBeam(Yellow, Circle)
+
+Show
+    BaseType "Bronze Key"
+    +LootBeam(White, Circle)

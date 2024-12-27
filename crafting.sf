@@ -1,0 +1,88 @@
+
+Show
+    BaseType  "Greater Essence of Torment" "Greater Essence of Haste" "Greater Essence of Ruin"
+    PlayEffect Brown
+    MinimapIcon 1 Brown Circle
+
+Show
+    BaseType  "Greater Essence of Sorcery" "Greater Essence of Electricity" "Greater Essence of Enhancement" "Greater Essence of Flames" "Greater Essence of Ice" "Greater Essence of the Mind" "Greater Essence of the Body" "Greater Essence of Battle" "Greater Essence of the Infinite"
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+
+Show
+    BaseType  "Essence of Torment" "Essence of Ruin" "Essence of Haste"
+    PlayEffect Yellow
+    MinimapIcon 2 Yellow Circle
+
+Show
+    BaseType  "Essence of Sorcery" "Essence of Electricity" "Essence of Enhancement" "Essence of Flames" "Essence of Ice" "Essence of the Mind" "Essence of the Body" "Essence of Battle" "Essence of the Infinite"
+    PlayEffect White
+    MinimapIcon 2 White Circle
+
+Show
+    BaseType "Essence" # Safety Catch-all
+    PlayEffect White
+    MinimapIcon 2 White Circle
+
+Show
+    Class "Omen"
+    BaseType  "Omen of Whittling" "Omen of Sinistral Erasure" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Dextral Annulment"
+    PlayEffect Purple
+    MinimapIcon 0 Purple Circle
+
+Show
+    Class "Omen"
+    BaseType  "Omen of Amelioration" "Omen of Corruption"
+    PlayEffect Brown
+    MinimapIcon 1 Brown Circle
+
+Show
+    Class "Omen"
+    BaseType  "Omen of Greater Annulment" "Omen of Resurgence" "Omen of Sinistral Exaltation" "Omen of Dextral Exaltation" "Omen of Greater Exaltation" "Omen of Sinistral Alchemy" "Omen of Refreshment" "Omen of Dextral Alchemy" "Omen of Sinistral Coronation"
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+
+Show
+    Class "Omen"
+    BaseType  "Omen of Dextral Coronation"
+    PlayEffect Yellow
+    MinimapIcon 2 Yellow Circle
+
+Show
+    Class "Omen" # Safety Catch-all
+    PlayEffect White
+    MinimapIcon 2 White Circle
+
+Show
+    Class "Socketable"
+    BaseType  "Soul Core of Azcapa" "Soul Core of Zalatl"
+    PlayEffect Brown
+    MinimapIcon 1 Brown Circle
+    Continue
+
+Show
+    Class "Socketable"
+    BaseType  "Soul Core of Citaqualotl" "Soul Core of Tacati"
+    PlayEffect Orange
+    MinimapIcon 2 Orange Circle
+    Continue
+
+Show
+    Class "Socketable"
+    BaseType  "Soul Core of Jiquani" "Soul Core of Puhuarte"
+    PlayEffect Yellow
+    MinimapIcon 2 Yellow Circle
+    Continue
+
+Show
+    Class "Socketable"
+    BaseType  "Soul Core of Opiloti" "Soul Core of Atmohua" "Soul Core of Cholotl" "Soul Core of Quipolatl" "Soul Core of Ticaba" "Soul Core of Topotante" "Soul Core of Tzamoto" "Soul Core of Xopec" "Soul Core of Zantipi"
+    PlayEffect White
+    MinimapIcon 2 White Circle
+    Continue
+
+Show
+    Class "Socketable"
+    BaseType "Soul Core" # Safety Catch-all
+    PlayEffect White
+    MinimapIcon 2 White Circle

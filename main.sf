@@ -1,342 +1,70 @@
+
+
 # Cosmetics
 $white = 255 255 255
 $black = 0 0 0
+$teal = 0 240 190
+$green = 0 75 30
+$pink = 180 0 255
 $font_size = 20
-
+$font_size_normal = 30
+$font_size_large = 40
+$font_size_xlarge = 45
 $waystone_tier = 15
 
 Show
     SetFontSize $font_size
     Continue
 
+Mixin Plate($text_color, $bg_color, $plate_font_size)
+    SetTextColor $text_color
+    SetBorderColor $text_color
+    SetBackgroundColor $bg_color
+    SetFontSize $plate_font_size
+
+Mixin LootBeam($color, $icon)
+    PlayEffect $color
+    MinimapIcon 2 $color $icon
+
 #! Aggressively hide all loot by default
 Hide
     Continue
 
 Import "customization.sf"
-
 Import "currency.sf"
 Import "salvage.sf"
+Import "trials/sanctum.sf"
+Import "trials/ultimatum.sf"
 Import "endgame/mapping.sf"
 Import "endgame/delirium.sf"
+Import "endgame/breach.sf"
+Import "endgame/expedition.sf"
+Import "endgame/ritual.sf"
 
 Show
     Rarity Unique
-    PlayEffect Brown
-    MinimapIcon 2 Brown Kite
+    +LootBeam(Brown, Kite)
 
 Show
     Class "Amulet" "Ring" "Belt"
     Rarity Rare
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Kite
+    +LootBeam(Yellow, Kite)
 
 Show
     BaseType "Stellar Amulet" "Azure Amulet" "Gold Ring" "Heavy Belt"
-    SetTextColor 0 240 190
-    SetBorderColor 0 240 190
-    SetBackgroundColor 0 75 30
     Rarity = Normal
-
-#######################################################
-    ##### Trials
-#######################################################
-
-Show
-    BaseType  "Djinn Barya" "Inscribed Ultimatum"
-    SetBackgroundColor 180 0 255
-    SetBorderColor 255 255 255
-    SetTextColor 255 255 255
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Diamond
-
-Show
-    Class "Charms"
-    BaseType  "Thawing Charm" "Amethyst Charm" "Golden Charm"
-    PlayEffect White
-    MinimapIcon 2 White Circle
-
+    +Plate($teal, $green, $font_size_normal)
+    +LootBeam(White, Kite)
 
 Show
     Class "Jewels"
-    PlayEffect White
-    MinimapIcon 2 White Circle
-#######################################################
-    ##### Sanctum
-#######################################################
-
-Show
-    Class "Relic"
-    SetTextColor 0 240 190
-    SetBorderColor 0 240 190
-    SetBackgroundColor 20 20 0
-    PlayEffect White
-    MinimapIcon 2 White Circle
-
-Show
-    BaseType "Gold Key" "Silver Key" "Bronze Key"
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-
-Show
-    BaseType "Silver Key"
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Circle
-
-Show
-    BaseType "Bronze Key"
-    PlayEffect White
-    MinimapIcon 2 White Circle
-
-
-
-
-Show
-    BaseType  "Breachstone" "Simulacrum" "An Audience with the King"
-    SetTextColor 180 0 255
-    SetBorderColor 180 0 255
-    SetBackgroundColor 255 255 255
-    SetFontSize 45
-    PlayEffect Brown
-    MinimapIcon 1 Brown Circle
-    Continue
-Show
-    BaseType "Breach Ring"
-    SetTextColor 240 0 0
-    SetBorderColor 240 0 0
-    SetBackgroundColor 70 0 20
-    SetFontSize 45
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-
-Show
-    Class Currency
-    BaseType  "Esh's Catalyst" "Neural Catalyst" "Reaver Catalyst" "Chayula's Catalyst" "Tul's Catalyst" "Xoph's Catalyst"
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Circle
-
-Show
-    Class Currency
-    BaseType  "Adaptive Catalyst" "Flesh Catalyst" "Skittering Catalyst" "Sibilant Catalyst" "Uul-Netol's Catalyst" "Carapace Catalyst"
-    PlayEffect White
-    MinimapIcon 2 White Circle
-
-Show
-    Class Currency
-    BaseType "Catalyst" # Safety Catch-all
-    PlayEffect White
-    MinimapIcon 2 White Circle
-#######################################################
-    ##### Fragments
-#######################################################
-    #An Audience with the King  167
-# 
-# Faded Crisis Fragment      27
-# Ancient Crisis Fragment    19
-# Weathered Crisis Fragment  17
-# 
-# Deadly Fate                11
-# Cowardly Fate              6
-# Victorious Fate            5
-
-Show
-    BaseType  "An Audience with the King"
-    PlayEffect Purple
-    MinimapIcon 0 Purple Circle
-
-Show
-    BaseType  "Deadly Fate" "Cowardly Fate" "Victorious Fate"
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
+    +LootBeam(White, Circle)
+    +Plate($teal, $green, $font_size_normal)
 
 Show
     BaseType "Fragment" # Specific fragments can't seem to be added; just adding this catch-all
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-#######################################################
-    ##### Expedition
-#######################################################
 
-Show
-    Class "Expedition Logbooks"
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-
-Show
-    Class "Currency"
-    BaseType "Exotic Coinage"
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-
-Show
-    Class "Currency"
-    BaseType "Artifact"
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Circle
-#######################################################
-    ##### Essences
-#######################################################
-    #Greater Essence of Torment      26
-    #Greater Essence of Haste        23
-    #Greater Essence of Ruin         15
-# 
-# Greater Essence of Sorcery      10
-# Greater Essence of Electricity  9
-# Greater Essence of Enhancement  8
-# Greater Essence of Flames       6
-# Greater Essence of Ice          6
-# Greater Essence of the Mind     5
-# Greater Essence of the Body     4
-# Greater Essence of Battle       3
-# Greater Essence of the Infinite 3
-# 
-# Essence of Torment              1
-# Essence of Ruin                 1
-# Essence of Haste                1
-# 
-# Essence of Electricity          0.4
-# Essence of the Body             0.1
-# Essence of the Mind             0.1
-# Essence of Enhancement          0.2
-# Essence of Flames               0.1
-# Essence of Ice                  0.1
-# Essence of Battle               0.2
-# Essence of Sorcery              0.2
-# Essence of the Infinite         0.1
-
-Show
-    BaseType  "Greater Essence of Torment" "Greater Essence of Haste" "Greater Essence of Ruin"
-    PlayEffect Brown
-    MinimapIcon 1 Brown Circle
-
-Show
-    BaseType  "Greater Essence of Sorcery" "Greater Essence of Electricity" "Greater Essence of Enhancement" "Greater Essence of Flames" "Greater Essence of Ice" "Greater Essence of the Mind" "Greater Essence of the Body" "Greater Essence of Battle" "Greater Essence of the Infinite"
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-
-Show
-    BaseType  "Essence of Torment" "Essence of Ruin" "Essence of Haste"
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Circle
-
-Show
-    BaseType  "Essence of Sorcery" "Essence of Electricity" "Essence of Enhancement" "Essence of Flames" "Essence of Ice" "Essence of the Mind" "Essence of the Body" "Essence of Battle" "Essence of the Infinite"
-    PlayEffect White
-    MinimapIcon 2 White Circle
-
-Show
-    BaseType "Essence" # Safety Catch-all
-    PlayEffect White
-    MinimapIcon 2 White Circle
-#######################################################
-    ##### Omens
-#######################################################
-    #Omen of Whittling             112
-    #Omen of Sinistral Erasure     ?
-    #Omen of Dextral Erasure       ?
-    #Omen of Sinistral Annulment   ?
-    #Omen of Dextral Annulment     ?
-# 
-# Omen of Amelioration          17
-# Omen of Corruption            11
-# 
-# Omen of Greater Annulment     3
-# Omen of Resurgence            2.5
-# Omen of Sinistral Exaltation  2
-# Omen of Dextral Exaltation    2
-# Omen of Greater Exaltation    1.5
-# Omen of Sinistral Alchemy     1.5
-# Omen of Refreshment           1
-# Omen of Dextral Alchemy       1
-# Omen of Sinistral Coronation  1
-# 
-# Omen of Dextral Coronation    0.5
-
-Show
-    Class "Omen"
-    BaseType  "Omen of Whittling" "Omen of Sinistral Erasure" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Dextral Annulment"
-    PlayEffect Purple
-    MinimapIcon 0 Purple Circle
-
-Show
-    Class "Omen"
-    BaseType  "Omen of Amelioration" "Omen of Corruption"
-    PlayEffect Brown
-    MinimapIcon 1 Brown Circle
-
-Show
-    Class "Omen"
-    BaseType  "Omen of Greater Annulment" "Omen of Resurgence" "Omen of Sinistral Exaltation" "Omen of Dextral Exaltation" "Omen of Greater Exaltation" "Omen of Sinistral Alchemy" "Omen of Refreshment" "Omen of Dextral Alchemy" "Omen of Sinistral Coronation"
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-
-Show
-    Class "Omen"
-    BaseType  "Omen of Dextral Coronation"
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Circle
-
-Show
-    Class "Omen" # Safety Catch-all
-    PlayEffect White
-    MinimapIcon 2 White Circle
-#######################################################
-    ##### Soul Cores
-#######################################################
-    #Soul Core of Azcapa      44
-    #Soul Core of Zalatl      12
-# 
-# Soul Core of Citaqualotl 4
-# Soul Core of Tacati      4
-# 
-# Soul Core of Jiquani     2
-# Soul Core of Puhuarte    2
-# 
-# Soul Core of Opiloti     1
-# Soul Core of Atmohua     1
-# Soul Core of Cholotl     1
-# Soul Core of Quipolatl   1
-# Soul Core of Ticaba      1
-# Soul Core of Topotante   1
-# Soul Core of Tzamoto     1
-# Soul Core of Xopec       1
-# Soul Core of Zantipi     1
-
-Show
-    Class "Socketable"
-    BaseType  "Soul Core of Azcapa" "Soul Core of Zalatl"
-    PlayEffect Brown
-    MinimapIcon 1 Brown Circle
-    Continue
-
-Show
-    Class "Socketable"
-    BaseType  "Soul Core of Citaqualotl" "Soul Core of Tacati"
-    PlayEffect Orange
-    MinimapIcon 2 Orange Circle
-    Continue
-
-Show
-    Class "Socketable"
-    BaseType  "Soul Core of Jiquani" "Soul Core of Puhuarte"
-    PlayEffect Yellow
-    MinimapIcon 2 Yellow Circle
-    Continue
-
-Show
-    Class "Socketable"
-    BaseType  "Soul Core of Opiloti" "Soul Core of Atmohua" "Soul Core of Cholotl" "Soul Core of Quipolatl" "Soul Core of Ticaba" "Soul Core of Topotante" "Soul Core of Tzamoto" "Soul Core of Xopec" "Soul Core of Zantipi"
-    PlayEffect White
-    MinimapIcon 2 White Circle
-    Continue
-
-Show
-    Class "Socketable"
-    BaseType "Soul Core" # Safety Catch-all
-    PlayEffect White
-    MinimapIcon 2 White Circle
-
-# Hide anything that was revealed by a rule above. <tune>
+# Hide anything that was revealed by a rule above.
 
 Hide
     Class "Stackable Currency"

@@ -1,0 +1,14 @@
+
+Show
+    BaseType  "Breachstone" "Simulacrum" "An Audience with the King"
+    +Plate($pink, $white, $font_size_xlarge)
+    +LootBeam(Brown, Circle)
+    Continue
+
+Show
+    BaseType "Breach Ring"
+    SetTextColor 240 0 0
+    SetBorderColor 240 0 0
+    SetBackgroundColor 70 0 20
+    SetFontSize 45
+    +LootBeam(Orange, Circle)
